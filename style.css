@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans);
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.small-text {
+    padding: 5px 0 5px 0;
+}
+
+.radio-input {
+    margin: 0 0 10px 0;
+}
+
+.payment-method {
+    display: flex;
+    max-width: 300px;
+    justify-content: space-between;
+}
+
+.method {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-horizontal {
+    margin: 0 5px 0 5px;
+}
+
+.banner-square {
+    width: 200px;
+    margin: 0 5px 0 5px;
+}
+
+.banner-method {
+    display: flex;
+    max-width: 800px;
+    justify-content: space-between;
+}
+
+.message-lty {
+    background-color: black;
+    max-width: 450px;
+}

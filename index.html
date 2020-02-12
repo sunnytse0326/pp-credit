@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Add meta tags for mobile and IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css">
+    
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=Af9D7b1mRsoJjJX9JkMUqyF3l1EA35Nbf85UxQzkjaZyuZtcYqgjx5GcUJllLQaYvwo6w521qMKaOQqU&components=messages"
+    data-namespace="paypal2">
+    </script>
+    <!-- includes jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    
+    <script  src="./script.js"></script>
+</head>
+
+<body>
+    <h2>PayPal Credit Banners:</h2>
+
+    <div class="payment-method">
+        <div class="radio-input">
+            <input id="20to1-radio" type="radio" name="banner" checked>
+            20:1
+        </div>
+
+        <div class="radio-input">
+            <input id="8to1-radio" type="radio" name="banner">
+            8:1
+        </div>
+
+        <div class="radio-input">
+            <input id="1to4-radio" type="radio" name="banner" >
+            1:4
+        </div>
+
+        <div class="radio-input">
+            <input id="1to1-radio" type="radio" name="banner">
+            1:1
+        </div>
+    </div>
+    
+    <div id="20to1-lty">
+        <div class="small-text">
+            <span>Black Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="black"
+            data-pp-style-ratio="20x1">
+        </div>
+        <div class="small-text">
+            <span>Blue Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="blue"
+            data-pp-style-ratio="20x1">
+        </div>
+        <div class="small-text">
+            <span>Grey Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="grey"
+            data-pp-style-ratio="20x1">
+        </div>
+        <div class="small-text">
+            <span>White Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="white"
+            data-pp-style-ratio="20x1">
+        </div>
+        
+        <div class="small-text">
+            <span>White Style Without Border:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="white-no-border"
+            data-pp-style-ratio="20x1">
+        </div>
+    </div>
+
+    <div id="8to1-lty" style="display: none;">
+        <div class="small-text">
+            <span>Black Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="black"
+            data-pp-style-ratio="8x1">
+        </div>
+        <div class="small-text">
+            <span>Blue Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="blue"
+            data-pp-style-ratio="8x1">
+        </div>
+        <div class="small-text">
+            <span>Grey Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="grey"
+            data-pp-style-ratio="8x1">
+        </div>
+        <div class="small-text">
+            <span>White Style:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="white"
+            data-pp-style-ratio="8x1">
+        </div>
+        
+        <div class="small-text">
+            <span>White Style Without Border:</span>
+        </div>
+        <div
+            data-pp-message
+            data-pp-style-layout="flex"
+            data-pp-style-color="white-no-border"
+            data-pp-style-ratio="8x1">
+        </div>
+    </div>
+
+    <div id="1to4-lty" class="banner-method" style="display: none;">
+        <div class="banner-horizontal">
+            <div class="small-text">
+                <span>Black Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="black"
+                data-pp-style-ratio="1x4">
+            </div>
+        </div>
+
+        <div class="banner-horizontal">
+            <div class="small-text">
+                <span>Blue Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="blue"
+                data-pp-style-ratio="1x4">
+            </div>
+        </div>
+
+        <div class="banner-horizontal">
+            <div class="small-text">
+                <span>Grey Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="grey"
+                data-pp-style-ratio="1x4">
+            </div>
+        </div>
+
+        <div class="banner-horizontal">
+            <div class="small-text">
+                <span>White Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="white"
+                data-pp-style-ratio="1x4">
+            </div>
+        </div>
+        
+        <div class="banner-horizontal">
+            <div class="small-text">
+                <span>Without Border:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="white-no-border"
+                data-pp-style-ratio="1x4">
+            </div>
+        </div>
+    </div>
+
+    <div id="1to1-lty" class="banner-method" style="display: none;">
+        <div class="banner-square">
+            <div class="small-text">
+                <span>Black Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="black"
+                data-pp-style-ratio="1x1">
+            </div>
+        </div>
+        <div class="banner-square">
+            <div class="small-text">
+                <span>Blue Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="blue"
+                data-pp-style-ratio="1x1">
+            </div>
+        </div>
+        <div class="banner-square">
+            <div class="small-text">
+                <span>Grey Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="grey"
+                data-pp-style-ratio="1x1">
+            </div>
+        </div>
+        <div class="banner-square">
+            <div class="small-text">
+                <span>White Style:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="white"
+                data-pp-style-ratio="1x1">
+            </div>
+        </div>
+        
+        <div class="banner-square">
+            <div class="small-text">
+                <span>Without Border:</span>
+            </div>
+            <div
+                data-pp-message
+                data-pp-style-layout="flex"
+                data-pp-style-color="white-no-border"
+                data-pp-style-ratio="1x1">
+            </div>
+        </div>
+    </div>
+
+    <h2>PayPal Credit Message:</h2>
+
+    <div class="payment-method">
+        <div class="radio-input">
+            <input id="left-message-radio" type="radio" name="message" checked>
+            Left
+        </div>
+
+        <div class="radio-input">
+            <input id="top-1-message-radio" type="radio" name="message">
+            Top 1
+        </div>
+
+        <div class="radio-input">
+            <input id="top-2-message-radio" type="radio" name="message" >
+            Top 2
+        </div>
+
+        <div class="radio-input">
+            <input id="inline-message-radio" type="radio" name="message">
+            Inline
+        </div>
+    </div>
+
+    <div id="message-left">
+        <div class="small-text">
+            <span>Logo on Left (black):</span>
+        </div>
+
+        <div
+            data-pp-message
+            data-pp-style-layout="text"
+            data-pp-style-text-color="black"
+            data-pp-style-logo-type="primary"
+            data-pp-style-logo-position="left">
+        </div>
+
+        <div class="small-text">
+            <span>Logo on Left (white):</span>
+        </div>
+
+        <div class="message-lty">
+            <div
+                data-pp-message
+                data-pp-style-layout="text"
+                data-pp-style-text-color="white"
+                data-pp-style-logo-type="primary"
+                data-pp-style-logo-position="left">
+            </div>
+        </div>
+    </div>
+
+    <div id="message-top1">
+        <div class="small-text">
+            <span>Logo on Top 1 (black):</span>
+        </div>
+
+        <div
+            data-pp-message
+            data-pp-style-layout="text"
+            data-pp-style-text-color="black"
+            data-pp-style-logo-type="primary"
+            data-pp-style-logo-position="top">
+        </div>
+
+        <div class="small-text">
+            <span>Logo on Top 1 (white):</span>
+        </div>
+
+        <div class="message-lty">
+            <div
+                data-pp-message
+                data-pp-style-layout="text"
+                data-pp-style-text-color="white"
+                data-pp-style-logo-type="primary"
+                data-pp-style-logo-position="top">
+            </div>
+        </div>
+    </div>
+
+    <div id="message-top2">
+        <div class="small-text">
+            <span>Logo on Top 2 (black):</span>
+        </div>
+
+        <div
+            data-pp-message
+            data-pp-style-layout="text"
+            data-pp-style-text-color="black"
+            data-pp-style-logo-type="alternative"
+            data-pp-style-logo-position="top">
+        </div>
+
+        <div class="small-text">
+            <span>Logo on Top 2 (white):</span>
+        </div>
+
+        <div class="message-lty">
+            <div
+                data-pp-message
+                data-pp-style-layout="text"
+                data-pp-style-text-color="white"
+                data-pp-style-logo-type="alternative"
+                data-pp-style-logo-position="top">
+            </div>
+        </div>
+    </div>
+
+    <div id="message-inline">
+        <div class="small-text">
+            <span>Logo on Inline (black):</span>
+        </div>
+
+        <div
+            data-pp-message
+            data-pp-style-layout="text"
+            data-pp-style-text-color="black"
+            data-pp-style-logo-type="inline"
+            data-pp-style-logo-position="undefined">
+        </div>
+
+        <div class="small-text">
+            <span>Logo on Inline (white):</span>
+        </div>
+
+        <div class="message-lty">
+            <div
+                data-pp-message
+                data-pp-style-layout="text"
+                data-pp-style-text-color="white"
+                data-pp-style-logo-type="inline"
+                data-pp-style-logo-position="undefined">
+            </div>
+        </div>
+    </div>
+
+    <div class="small-text">
+        <br>
+        <span>For changing the message context, please visit this link for the details:</span>
+        <br>
+        <a href="https://developer.paypal.com/docs/limited-release/sdk-credit-messaging/integrate/configuration/">PayPal Credit Message Advanced Configuration</a>
+    </div> 
+
+    <h2>PayPal Credit Email Banner:</h2>
+
+    <div class="payment-method">
+        <div class="radio-input">
+            <input id="728x90-radio" type="radio" name="email" checked>
+            728 x 90
+        </div>
+
+        <div class="radio-input">
+            <input id="300x250-radio" type="radio" name="email">
+            300 x 250
+        </div>
+    </div>
+
+    <div id="email-banner-728x90-lty">
+        <div class="small-text">
+            <span>728 x 90 (black):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-728-90-g@2x.png"
+        width="728" height="90" style="max-width: 728px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=728x90&s=BLKWHTYLRG" style="display:none;">
+
+        <div class="small-text">
+            <span>728 x 90 (blue):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-728-90-b@2x.png"
+        width="728" height="90" style="max-width: 728px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=728x90&s=BLUWHTYLRG" style="display:none;">
+
+        <div class="small-text">
+            <span>728 x 90 (white):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-728-90-w@2x.png"
+        width="728" height="90" style="max-width: 728px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=728x90&s=WHTBLUYLRG" style="display:none;">
+
+        <div class="small-text">
+            <span>728 x 90 (white without border):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-728-90-n@2x.png" width="728" height="90" style="max-width: 728px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=728x90&s=WHTBLUNLRG" style="display:none;">
+    </div>
+
+    <div id="email-banner-300x250-lty" style="display: none">
+        <div class="small-text">
+            <span>300 x 250 (black):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-300-250-g@2x.png"
+        width="300" height="250" style="max-width: 300px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=300x250&s=BLKWHTYLRG" style="display:none;">
+        
+        <div class="small-text">
+            <span>300 x 250 (blue):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-300-250-b@2x.png"
+        width="300" height="250" style="max-width: 300px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=300x250&s=BLUWHTYLRG" style="display:none;">
+                
+        <div class="small-text">
+            <span>300 x 250 (white):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-300-250-w@2x.png"
+        width="300" height="250" style="max-width: 300px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=300x250&s=WHTBLUYLRG" style="display:none;">
+                
+        <div class="small-text">
+            <span>300 x 250 (white without border):</span>
+        </div>
+
+        <a href="https://www.paypal.com/ppcreditapply/da/us/lander?p=ppcdalpBAUNI&t=ppcdaltMerchEmailBanner">
+        <img src="https://www.paypalobjects.com/upstream/assets/img/fp-v2/email/email-al-300-250-n@2x.png"
+        width="300" height="250" style="max-width: 300px;" border="0" alt="PayPal Credit" dir="ltr">
+        </a>
+        <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=300x250&s=WHTBLUNLRG" style="display:none;">
+    </div>
+
+    <h2>PayPal Credit Information:</h2>
+    
+    <div class="small-text">
+        <span>Promotion:</span>
+        <a href="https://www.paypal.com/us/webapps/mpp/promotional-financing">PayPal Credit Home Website</a>
+    </div>
+
+    <div class="small-text">
+        <span>Code Gerneration:</span>
+        <a href="https://www.paypal.com/ppcredit/">PayPal Credit Code Generation</a>
+    </div>
+    
+    
+
+    <div style="margin-bottom: 60px;"> 
+    </div>
+</body>
