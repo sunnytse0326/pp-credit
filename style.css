@@ -9,13 +9,23 @@ body {
     padding: 5px 0 5px 0;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 .radio-input {
     margin: 0 0 10px 0;
 }
 
-.payment-method {
+.horizontal-lty {
     display: flex;
     max-width: 300px;
+    justify-content: space-between;
+}
+
+.horizontal-spb {
+    display: flex;
+    max-width: 600px;
     justify-content: space-between;
 }
 

@@ -10,6 +10,7 @@
     src="https://www.paypal.com/sdk/js?client-id=Af9D7b1mRsoJjJX9JkMUqyF3l1EA35Nbf85UxQzkjaZyuZtcYqgjx5GcUJllLQaYvwo6w521qMKaOQqU&components=messages"
     data-namespace="paypal2">
     </script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <!-- includes jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
     
@@ -19,7 +20,7 @@
 <body>
     <h2>PayPal Credit Banners:</h2>
 
-    <div class="payment-method">
+    <div class="horizontal-lty">
         <div class="radio-input">
             <input id="20to1-radio" type="radio" name="banner" checked>
             20:1
@@ -262,7 +263,7 @@
 
     <h2>PayPal Credit Message:</h2>
 
-    <div class="payment-method">
+    <div class="horizontal-lty">
         <div class="radio-input">
             <input id="left-message-radio" type="radio" name="message" checked>
             Left
@@ -405,7 +406,7 @@
 
     <h2>PayPal Credit Email Banner:</h2>
 
-    <div class="payment-method">
+    <div class="horizontal-lty">
         <div class="radio-input">
             <input id="728x90-radio" type="radio" name="email" checked>
             728 x 90
@@ -500,6 +501,75 @@
         <img src="https://t.paypal.com/webapps/tracking/ts?e=im&event_type=impression&pgrp=mercue:email:banner&page=mercue:email:banner&mrid=4RNWHB7SUBZ94&mpid=300x250&s=WHTBLUNLRG" style="display:none;">
     </div>
 
+    <h2>PayPal Credit Smart Button:</h2>
+
+
+    <div class="horizontal-spb">
+        <div>
+            <style>
+                @media screen and (max-width: 400px) {
+                    #paypal-button-container {
+                        width: 100%;
+                    }
+                }
+                @media screen and (min-width: 400px) {
+                    #paypal-button-container {
+                        width: 250px;
+                        display: inline-block;
+                    }
+                }
+            </style>
+
+            <div id="paypal-button-container"></div>
+            <script>
+                paypal.Button.render({
+                    env: 'sandbox',
+                    style: {
+                        layout: 'vertical',
+                        label: 'checkout',
+                        size:  'responsive',
+                        shape: 'pill',
+                        color: 'gold'
+                    },
+                    funding: {
+                            allowed: [ paypal.FUNDING.CREDIT ]
+                    },
+                    client: {
+                        sandbox:    'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+                        production: '<insert production client id>'
+                    },
+                    payment: function(data, actions) {
+                        return actions.payment.create({
+                            payment: {
+                                transactions: [
+                                    {
+                                        amount: { total: '0.01', currency: 'USD' }
+                                    }
+                                ]
+                            }
+                        });
+                    },
+                    onAuthorize: function(data, actions) {
+                        return actions.payment.execute().then(function() {
+                            window.alert('Payment Complete!');
+                        });
+                    }
+                }, '#paypal-button-container');
+            </script>
+            <div class="text-align-center">
+                <span style="width: 300px;">Checkout.JS</span>
+            </div>
+        </div>
+
+        <div>
+            <iframe src="spb_js_sdk.html" style="border: none;" width="250px" height="160"></iframe>
+            <div class="text-align-center">
+                <span style="width: 300px;">JS SDK</span>
+            </div>
+        </div>
+    </div>
+    
+
     <h2>PayPal Credit Information:</h2>
     
     <div class="small-text">
@@ -513,7 +583,6 @@
     </div>
     
     
-
     <div style="margin-bottom: 60px;"> 
     </div>
 </body>
